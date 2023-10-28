@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Sensores</title>
+</head>
+<body>
+    <h1>Leitura de Sensores</h1>
+    
+    <div>
+        <h2>Leitura do Sensor de Temperatura</h2>
+        <p>Temperatura: <span id="temperatura">-- °C</span></p>
+    </div>
+    
+    <div>
+        <h2>Leitura do Sensor de Umidade</h2>
+        <p>Umidade: <span id="umidade">--%</span></p>
+    </div>
+    
+    <script>
+        // Simulação de leitura dos sensores (substitua por dados reais)
+        function atualizarLeiturasSensores() {
+            var temperatura = Math.floor(Math.random() * 30) + 20; // Simula a temperatura entre 20°C e 50°C
+            var umidade = Math.floor(Math.random() * 50) + 50; // Simula a umidade entre 50% e 100%
+            
+            document.getElementById('temperatura').textContent = temperatura + ' °C';
+            document.getElementById('umidade').textContent = umidade + '%';
+        }
+        
+        // Atualiza as leituras dos sensores a cada 5 segundos (5000 milissegundos)
+        setInterval(atualizarLeiturasSensores, 5000);
+        
+        // Chama a função uma vez para exibir os valores iniciais
+        atualizarLeiturasSensores();
+    </script>
+</body>
+</html>
